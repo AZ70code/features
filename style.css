@@ -1,0 +1,129 @@
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans:regular,500,600,700&display=swap);
+* {
+    margin: 0;
+}
+body {
+    font-size: 16px;
+    font-family: 'Fira Sans';
+}
+input {
+    background-color: transparent;
+}
+.wrapper {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+	overflow: hidden;
+    padding: 0 calc(50% - 720px);
+    background: url(./img/lake.png)center / cover no-repeat;
+    transition: all 1s ease;
+}
+.bird {
+    content: '';
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    top: 0;
+    left: 0;
+    background: url(./img/bird.png)50% 10% / 100% no-repeat;
+}
+.container {
+    position: relative;
+    flex: 1;
+    margin: 0 auto;
+    padding: 10% 15px 15px ;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+    z-index: 2;
+}
+.rank {
+    font-size: 28px;
+    display: flex;
+    gap: 15px;
+    align-items: flex-end;
+    padding: 10px;
+}
+.rank-body {
+        position: relative;
+}
+.rank-body::before {
+    content: '★★★★★';
+    display: block;
+}
+.active {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    cursor: pointer;
+}
+.active::before {
+    content: '★★★★★';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    color: #FFC14B;
+}
+.items {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.item {
+    flex: 0 0 20%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+.value {
+    font-size: 24px;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    width: 55px;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(231, 251, 255, 0.9);
+    padding: 1em;
+    border-radius: 5px;
+    border:  1px solid #FFC14B;
+}
+.card__title {
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+.card__text {
+    line-height: 1.5;
+    margin-bottom: 2em;
+    flex: 1 1 auto
+}
+.card__info {
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+}
+.card__avatar {
+    width: 50px;
+    height: 50px;
+}
+.card__avatar img{
+    max-width: 100%;
+}
+.card__author {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
